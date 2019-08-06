@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  PokeIndex
+//  PokeTest
 //
-//  Created by Elizeu RS on 05/08/19.
+//  Created by Elizeu RS on 31/07/19.
 //  Copyright © 2019 elizeurs. All rights reserved.
 //
 
@@ -10,12 +10,20 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+  
   var window: UIWindow?
-
-
+  
+  
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-    // Override point for customization after application launch.
+    
+    window = UIWindow()
+    window?.makeKeyAndVisible()
+    
+    let layout = UICollectionViewFlowLayout()
+    let navController = UINavigationController(rootViewController: PokeIndexController(collectionViewLayout: layout))
+    
+    window?.rootViewController = navController
+    
     return true
   }
 
